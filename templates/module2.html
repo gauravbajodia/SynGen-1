@@ -1,0 +1,45 @@
+{% extends 'module_layout.html' %}
+
+{% block title %}Module 2{% endblock %}
+
+{% block content %}
+
+    <div class="main container mt-5" >  
+
+        <h1>Module 2 - generate from file</h1>
+        <p>
+            perform machine learning algorithm on uploaded data-sets, 
+            to generate efficiency of different techniques
+        </p>
+
+        <form method="POST" class="input_form container mt-3">
+            <div class="input-wrapper  ">
+                <div class="input-fields">
+                <label for="row_num">Total Number of Rows To Be Generated :</label> 
+                <input type="number" name="row_num" value="10" class="text-center"> 
+                <br>
+
+                <label for="file_type" class="mt-2">Select file Type :</label>
+                <select name="file_type" class="file_type mt-2">
+                    <option value="excel">Excel</option>
+                    <option value="csv">CSV</option>
+                </select>
+
+                <br>
+                <input type="text" class="mt-3" name="field[]" value=""/>
+                <a href="javascript:void(0);" class="add-input" title="Add input"><img class="ml-5 add_btn" src="../static/images/add.svg" width="35px"/></a>
+                </div>
+            </div>
+            <input type="submit" value="Generate" class="btn btn-outline-primary mt-3" name="cmdsubmit">
+        </form>
+       
+    </div>  
+
+
+    <script>
+        
+    document.getElementById("navbar").classList.add("module-2-nav");
+    </script>
+
+
+{% endblock %}
