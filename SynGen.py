@@ -4,7 +4,7 @@ import random
 from random import randint, choice
 import pandas as pd
 
-class syngen:
+class generate_from_scratch:
     def __init__(self, seed = None):
         """
         Initiates the class and creates a Faker() object for later data generation by other methods
@@ -405,6 +405,25 @@ class syngen:
         # Commit the insertions and close the connection
         conn.commit()
         conn.close()
+        
+        
+class generate_from_data:
+    
+    def __init__(self, df):
+        
+        self.df = df
+        
+    def learn_and_generate(self, pkey= None, num = 100):
+        
+        from sdv.tabular import GaussianCopula
+        model = GaussianCopula(primary_key=pkey)
+        model.fit(self.df)
+        syn_data = model.sample(num)
+        syn_data.to_csv("./generated_synthetic_dataset.csv")
+        
+        return "./generated_synthetic_dataset.csv"
+        
+
     
 import numpy as np
 import pandas as pd

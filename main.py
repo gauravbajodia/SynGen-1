@@ -3,15 +3,14 @@ from flask_mysqldb import MySQL
 import MySQLdb.cursors
 import re
 from werkzeug.utils import secure_filename
-from SynGen import syngen
+from SynGen import generate_from_scratch, generate_from_data, compare_algo
 from flask.helpers import send_file
 import os
 import yaml
 import pandas as pd
 
-from SynGen import compare_algo
 
-obj = syngen()
+obj = generate_from_scratch()
 
 app = Flask(__name__)
 
