@@ -58,9 +58,11 @@ Following python packages would be required for running the project:
     
    ii)  Selct the type of file in which you would like to export the generated data.
     
-   iii) Enter the name of the fields that you would like to generate the data for 
-           Ex . Name, Number, City etc
-          You can add next field by pressing the '+' button on the right side of field box
+   iii) Enter the name of the fields that you would like to generate the data for. 
+           
+   -  Ex. Name, Number, City etc.
+   
+   -  You can add next field by pressing the '+' button on the right side of field box.
     
    iv)  After this simply click the genrate button to genrate the data. 
           
