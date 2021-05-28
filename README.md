@@ -32,12 +32,14 @@ Following python packages would be required for running the project:
   * scikit_learn
   
   ### Usage ###
-  1. create a virtual enviourment using command :
-  conda create --name myenv
+  * create a virtual enviourment using command :
+     conda create --name myenv
     
-  2. install above mentioned python libraries.
+  * install above mentioned python libraries.
+
+#### To Host file locally #### 
   
-  3. Open python/anaconda terminal and use this command to deploy Flask  :
+  * Open python/anaconda terminal and use this command to deploy Flask  :
     
     Set FLASK_APP= "filename.py
     
@@ -47,6 +49,37 @@ Following python packages would be required for running the project:
     
    Now head over to the local host link shown in your terminal. Eg: *http://127.0.0.1:5000/*.
   
-   For more detailed instructionon Flask [click here](https://flask.palletsprojects.com/en/1.1.x/quickstart/).
+   For more detailed instructionon on Flask [click here](https://flask.palletsprojects.com/en/1.1.x/quickstart/).
  
-  
+ ## ***Shown Below are instructions on how to use the synthetic data generator*** ##
+
+### 1. Module 1 ###    
+   i)   Select total number of rows to be generated. this is essentially the amount of data that you want to be generated.
+    
+   ii)  Selct the type of file in which you would like to export the generated data.
+    
+   iii) Enter the name of the fields that you would like to generate the data for 
+           Ex . Name, Number, City etc
+          You can add next field by pressing the '+' button on the right side of field box
+    
+   iv)  After this simply click the genrate button to genrate the data. 
+          
+### 2. Module 2 ###
+   
+   i)   Upload the dataset you would like your generated dataset to be based upon.
+        (pls use clean data set)
+   
+   ii)  Select the number of rows of data you would like to generate.
+   
+   iii) Selct the type of file in which you would like to export the generated data.
+
+### 3. Module 3 ###
+   
+   i)   Upload the data set you wish to apply machine learning algorithm on.
+   
+   ii)  Select the machinelearning algorithm you want to perform on the uploaded data set.
+   
+   iii) Input the value of X and Y from the data set.
+   
+   iv)  Click on generate button.   
+   
