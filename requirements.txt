@@ -1,0 +1,12 @@
+seaborn==0.11.1
+matplotlib==3.3.4
+pandas==1.1.4
+Werkzeug==1.0.1
+numpy==1.20.1
+sdv==0.10.0
+Flask_MySQLdb==0.2.0
+Faker==5.6.1
+Flask==1.1.2
+PyYAML==5.4.1
+scikit_learn==0.24.2
+gunicorn==20.1.0
