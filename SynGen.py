@@ -406,7 +406,8 @@ class generate_from_scratch:
         conn.commit()
         conn.close()
         
-        
+#  MOD 2
+       
 class generate_from_data:
     
     def __init__(self, df):
@@ -415,13 +416,20 @@ class generate_from_data:
         
     def learn_and_generate(self, pkey= None, num = 100):
         
+        
         from sdv.tabular import GaussianCopula
+        from sdv.evaluation import evaluate
+        
         model = GaussianCopula(primary_key=pkey)
         model.fit(self.df)
         syn_data = model.sample(num)
-        syn_data.to_csv("./generated_synthetic_dataset.csv")
-        
-        return "./generated_synthetic_dataset.csv"
+        # syn_data.to_csv("./generated_synthetic_dataset.csv")
+
+        # from sdv.evaluation import evaluate , evaluate (syn_data, df)
+        # ,evaluate(syn_data, df)
+        index= evaluate(syn_data, self.df)
+       
+        return syn_data,index
         
 
     
@@ -941,7 +949,7 @@ class compare_algo:
         sscores = [dbscan, kmeans]
         
         #plt.plot(algoList[1:], sscores, color = 'b', marker = 'o', markersize = 10, label = "Silhouette Score", linestyle = '--', linewidth = 3)
-        df = pd.DataFrame({'Algorithm': algoList[1:], 'Silhouette Score': sscores})
+        df = pd.DataFrame({'Algorithm': algoList[2:], 'Silhouette Score': sscores})
         splot = sns.barplot(x = 'Algorithm', y = 'Silhouette Score', data = df)
         for p in splot.patches:
             splot.annotate(format(p.get_height(), '.1f'), 
